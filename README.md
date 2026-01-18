@@ -54,7 +54,7 @@ url_shortener/
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Praneesh-Gattadi/url-shortener-flask-Advanced-.git
-cd url-shortener-flask
+cd url-shortener-flask-Advanced-
 ```
 
 ### 2️⃣ Install Dependencies
