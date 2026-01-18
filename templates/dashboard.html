@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+<h2>Welcome {{ current_user.username }}</h2>
+
+<form method="POST">
+  <input name="url" placeholder="Enter URL" required>
+  <button>Shorten</button>
+</form>
+
+<h3>Your URLs</h3>
+<ul>
+{% for u in urls %}
+<li>
+{{ u.original_url }} → 
+<a href="/{{u.short_code}}" target="_blank">
+http://127.0.0.1:5000/{{u.short_code}}
+</a>
+</li>
+{% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
+{% for msg in get_flashed_messages() %}<p>{{msg}}</p>{% endfor %}
+</body>
+</html>

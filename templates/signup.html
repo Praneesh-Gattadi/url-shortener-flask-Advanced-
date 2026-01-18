@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Signup</title></head>
+<body>
+<h2>Signup</h2>
+<form method="POST">
+  <input name="username" placeholder="Username" required>
+  <input name="password" type="password" placeholder="Password" required>
+  <button>Signup</button>
+</form>
+{% for msg in get_flashed_messages() %}<p>{{msg}}</p>{% endfor %}
+</body>
+</html>
